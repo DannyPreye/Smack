@@ -2,13 +2,18 @@
 module.exports = {
   content: [
     // eslint-disable-next-line quotes
-    './pages/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
     // eslint-disable-next-line quotes, comma-dangle
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     // eslint-disable-next-line comma-dangle
-    extend: {},
+    extend: {
+      fontFamily: {
+        ultra: ["Ultra", "serif"],
+        nunito: ["Nunito", "sans-serif"],
+      },
+    },
   },
   // eslint-disable-next-line comma-dangle
   plugins: [],
