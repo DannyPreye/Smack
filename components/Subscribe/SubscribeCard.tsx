@@ -10,8 +10,8 @@ const SubscribeCard = () => {
                 </h3>
                 <p className="">Stay up-to-date on the latest industry trends, product updates, and special offers by subscribing to our newsletter. </p>
             </div>
-            <div className="flex w-full max-w-[523px] h-[56px] border-[2px]  shadow-md rounded-full overflow-hidden ">
-                <input type="text" className="border-none outline-none w-[80%] px-4 " />
+            <div className="flex w-full max-w-[523px] mx-auto h-[56px] bg-white border-[2px]  shadow-md rounded-full overflow-hidden ">
+                <input type="text" className="border-none outline-none w-[80%] px-4 bg-transparent " />
                 <Button title="Subcribe" className="h-full" />
             </div>
         </div>
