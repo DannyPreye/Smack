@@ -5,6 +5,9 @@ import {
   AiFillRobot,
 } from "react-icons/ai";
 
+import { FcBusiness } from "react-icons/fc";
+import { RiEarthFill } from "react-icons/ri";
+
 export const menu: Menu[] = [
   {
     title: "Home",
@@ -30,22 +33,22 @@ export const menu: Menu[] = [
 
 export const services = [
   {
-    title: "Automate",
-    Icon: AiFillAccountBook,
+    title: "Elevate Your Business with AI-Driven Solutions",
+    Icon: FcBusiness,
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio mollitia excepturi aspernatur consequatur beatae esse? Nulla magnam architecto ad totam facere nisi maiores deserunt repellendus! Quas, ullam. Inventore, facere fugiat?",
+      "Our team of experts will work with you to identify areas of your business that can benefit from AI-powered solutions. From streamlining operations to improving customer service, we can help you leverage the power of AI to drive efficiency and increase your competitive edge.",
   },
   {
-    title: "Payment",
-    Icon: AiFillAlipayCircle,
+    title: "Revolutionize Your Online Presence with AI-Powered Tools",
+    Icon: RiEarthFill,
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio mollitia excepturi aspernatur consequatur beatae esse? Nulla magnam architecto ad totam facere nisi maiores deserunt repellendus! Quas, ullam. Inventore, facere fugiat?",
+      "With our AI-powered website development and digital marketing services, we can help you create a professional and effective online presence that drives results. From custom website design to social media management and content creation, we have the tools and expertise to help you succeed online.?",
   },
   {
-    title: "Automate ",
+    title: "Maximize Efficiency and Effectiveness with SMARK's AI Technologies",
     Icon: AiFillRobot,
     description:
-      "SMARK's AI-powered website offers tools for summarizing meetings and creating content. The meeting summary feature uses advanced AI technology to summarize key points and action items from meetings, saving time and increasing productivity. The content creation tool allows businesses to easily generate unique, professional-quality content for their online platforms.",
+      "Our comprehensive suite of AI products and services is designed to help businesses streamline operations, improve efficiency, and achieve better results. From meeting summary tools to content creation and social media management, we can help you take your business to the next level with the power of AI.",
   },
 ];
 
