@@ -30,7 +30,7 @@ const Nav = () => {
                 </div>
 
             </div>
-            <div onClick={() => setIsOpen(false)} className={`w-full xl:hidden backdrop-blur-sm bottom-0 bg-[#ffffff5d] flex flex-col fixed top-0 items-center pb-6 overflow-auto  ${isOpen ? "h-[100vh] fixed" : "h-[0px] absolute"} overflow-hidden  duration-1000  z-[1000] bottom-0 left-0`}>
+            <div onClick={() => setIsOpen(false)} className={`w-full xl:hidden backdrop-blur-sm bottom-0 bg-[#ffffff5d] flex flex-col fixed top-0 items-center pb-6 overflow-auto  ${isOpen ? "h-[100vh] fixed" : "h-[0px] absolute"} overflow-hidden  duration-1000  z-[3000] bottom-0 left-0`}>
                 <div className="mt-12 flex flex-col items-center justify-center gap-6">
                     <MdClose onClick={() => setIsOpen(false)} className="text-red-600 text-[3rem] cursor-pointer hover:text-[2.8rem] duration-700" />
                     {menu.map((item, id) => (
