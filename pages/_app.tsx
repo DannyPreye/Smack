@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Nav } from '../components'
+import { Nav, Footer, ScrollToTop } from '../components'
 import { NextSeo, DefaultSeo } from 'next-seo'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -8,5 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <NextSeo title='SMARK' />
     <Nav />
     <Component {...pageProps} />
+    <Footer />
+    <ScrollToTop />
   </>)
 }
