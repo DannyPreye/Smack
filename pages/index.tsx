@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Hero, Services, Blog } from '../components'
+import { Hero, Services, Blog, About, Subscribe } from '../components'
 
 export default function Home() {
   return (
@@ -9,7 +9,9 @@ export default function Home() {
       <main className='font-nunito' >
         <Hero />
         <Services />
+        <About />
         <Blog />
+        <Subscribe />
       </main>
     </>
   )
