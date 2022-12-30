@@ -1,18 +1,41 @@
+import React from 'react'
 import Image from 'next/image'
 import { Heading2 } from "../Text"
+import { useInView } from 'react-intersection-observer'
+import { useAnimation, motion } from 'framer-motion'
+
 
 const index = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+        triggerOnce: true
+    })
+    const animation = useAnimation()
+    React.useEffect(() => {
+        inView ? animation.start({
+            x: "0",
+            transition: {
+                type: 'spring', duration: 1.5, bounce: 0.3
+            }
+        }) : animation.start({
+            x: "-100vw",
+            transition: {
+                type: 'spring', duration: 1, bounce: 0.3
+            }
+        }, [])
+
+    })
     return (
         <section className="bg-gradient-to-tr from-blue-400 to-blue-600  ">
-            <div className="container mx-auto py-6">
+            <div ref={ref} className="container mx-auto py-6">
                 <Heading2 title="About Us" className="text-white" />
                 <div className="flex flex-col gap-4 text-center mt-5 text-white">
-                    <p>
+                    <motion.p animate={animation}>
                         At SMARK, we are passionate about helping businesses succeed online. Our team of expert software developers and digital marketers are dedicated to delivering cutting-edge AI-powered solutions that streamline operations, improve efficiency, and drive results.
-                    </p>
-                    <p>
+                    </motion.p>
+                    <motion.p animate={animation}>
                         Our comprehensive suite of services includes custom website design and development, AI-assisted content writing and grammar correction, Twitter profile management with AI-powered tweet scheduling, and full-service digital marketing strategy and execution. We work with businesses of all sizes across a variety of industries to help them create a professional and effective online presence.
-                    </p>
+                    </motion.p>
                     <p>
 
 

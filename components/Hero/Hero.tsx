@@ -12,7 +12,6 @@ const Hero = () => {
                     </p>
                     <Button title="Get Started" className="mt-5 rounded-full" />
                 </div>
-
                 <div className="lg:block hidden relative h-full w-6/12 ">
                     <Image src="/Group.png" alt="" fill objectFit="contain" objectPosition="right" />
                     <Image src='/girl-laptop.png' alt="girl with laptop" fill objectFit="contain" />

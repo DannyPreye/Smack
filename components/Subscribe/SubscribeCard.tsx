@@ -1,5 +1,5 @@
 import Button from "../Button"
-import { Heading2 } from "../Text"
+
 
 const SubscribeCard = () => {
     return (
