@@ -26,10 +26,10 @@ const index = () => {
 
     })
     return (
-        <section className="bg-gradient-to-tr from-blue-400 to-blue-600  ">
-            <div ref={ref} className="container mx-auto py-6 px-5">
+        <section className="bg-gradient-to-tr from-blue-400 pb-10  to-blue-600  ">
+            <div ref={ref} className="container mx-auto   px-5">
                 <Heading2 title="About Us" className="text-white" />
-                <div className="flex flex-col gap-4 text-center mt-5 text-white">
+                <div className="flex flex-col gap-4 text-center mt-5  text-white">
                     <motion.p animate={animation}>
                         At SMARK, we are passionate about helping businesses succeed online. Our team of expert software developers and digital marketers are dedicated to delivering cutting-edge AI-powered solutions that streamline operations, improve efficiency, and drive results.
                     </motion.p>
