@@ -14,7 +14,7 @@ const index = () => {
                 </div>
                 <div className="relative flex items-center container mx-auto">
                     <div className='lg:block hidden relative left-[-8rem]  h-[644px] w-[925px] '>
-                        <Image src="/oval.png" alt='' fill />
+                        <Image src="/Oval.png" alt='' fill />
                     </div>
                     <div className='w-full items-center lg:items-start py-6 lg:py-0 px-5 lg:w-[401px] lg:px-2 flex flex-col gap-5 text-center lg:text-left'>
                         <h2 className='font-extrabold  text-blue-600 text-[2rem] lg:text-[2.3rem]'>Let's build something great together</h2>
