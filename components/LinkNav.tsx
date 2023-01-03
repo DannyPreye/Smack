@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
 import { Menu } from '../utils/types'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 const LinkNav = ({ title, link }: Menu) => {
-    const router = useRouter()
-    const check = router.pathname === link
+    const path = usePathname()
+    const check = path === link
     return (
         <div className='relative group'>
             <Link href={link} className={`${check ? "text-[18px]" : "text-[14px]"} font-semibold font-nunito text-blue-500 hover:text-[18px] duration-700`} >

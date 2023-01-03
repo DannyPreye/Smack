@@ -5,9 +5,10 @@ export interface Menu {
   link: string;
 }
 
-export interface Blog {
+export interface BlogType {
   title: string;
-  featuredImage: string;
-  description: string;
-  created_at: Date;
+  featuredImage?: string;
+  content: string;
+  created_at?: Date;
+  slug?: string;
 }

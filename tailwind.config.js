@@ -3,6 +3,7 @@ module.exports = {
   content: [
     // eslint-disable-next-line quotes
     "./pages/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
     // eslint-disable-next-line quotes, comma-dangle
     "./components/**/*.{js,ts,jsx,tsx}",
   ],

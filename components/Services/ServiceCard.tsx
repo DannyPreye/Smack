@@ -10,6 +10,9 @@ interface Props {
 }
 
 const ServiceCard = ({ title, Icon, description, }: Props) => {
+
+
+
     return (
         <div className="flex flex-col gap-4 items-center justify-center">
             <Icon className="text-[5rem] text-blue-600" />

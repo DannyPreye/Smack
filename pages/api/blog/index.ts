@@ -40,7 +40,7 @@ export default async function handler(
       const response = await addDoc(blogRef, {
         title,
         content,
-        // feature_img: img,
+        slug:title.replace(/" "/g,"-")
       });
 
       res.status(200).json({

@@ -3,7 +3,7 @@ import Button from "../Button"
 
 const SubscribeCard = () => {
     return (
-        <div className="flex justify-center lg:gap-8 gap-4 lg:text-left text-center px-6 lg:px-0 items-end lg:flex-row flex-col w-full mt-12">
+        <div className=" mt-12 grid place-items-center gap-5 lg:grid-cols-2">
             <div className="lg:w-[311px] flex flex-col gap-3">
                 <h3 className="text-xl font-bold text-blue-600 ">
                     Stay in the loop with SMARK by subscribing to our newsletter.
