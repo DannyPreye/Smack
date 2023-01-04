@@ -22,7 +22,7 @@ const Home = ({ blog }: Props) => {
 
 
 export const getServerSideProps = async () => {
-    const { data } = await axios.get(`${process.env.BASE_URL}/api/blog`)
+    const { data } = await axios.get(`${process.env.BASE_URL}/api/blog?page=6`)
     return {
         props: {
             blog: data.data

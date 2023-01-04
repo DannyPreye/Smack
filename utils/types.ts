@@ -9,6 +9,6 @@ export interface BlogType {
   title: string;
   featuredImage?: string;
   content: string;
-  created_at?: Date;
+  created_At?: Date;
   slug?: string;
 }

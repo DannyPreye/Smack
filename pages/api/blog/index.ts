@@ -1,12 +1,22 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDocs, collection, addDoc } from "firebase/firestore";
+import cron from "node-cron";
+
 import { db } from "../../../config/firebase";
+import generateBlogPost from "../../../utils/generateBlog";
 
 type Data = {
   name: string;
 };
 
+cron.schedule("*/5 * * * * ", () => {
+  try {
+    generateBlogPost();
+  } catch (err) {
+    console.log(err);
+  }
+});
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -17,15 +27,20 @@ export default async function handler(
     try {
       // Get all document from the firestore
       const response = await getDocs(blogRef);
+      const { page } = req.query;
 
       const blog: any = [];
       // Loop through it to filter out the main data
       response.forEach((doc) => {
         blog.push({ ...doc.data(), id: doc.id });
       });
+
+      // Paginate the response
+      const paginatedPost = blog.slice(0, page);
+
       // Send response to the frontend
       res.status(200).json({
-        data: blog,
+        data: paginatedPost,
       });
     } catch (error) {
       res.status(400).json("Failed to fetch data");
@@ -40,7 +55,7 @@ export default async function handler(
       const response = await addDoc(blogRef, {
         title,
         content,
-        slug:title.replace(/" "/g,"-")
+        slug: title.replace(/" "/g, "-"),
       });
 
       res.status(200).json({
