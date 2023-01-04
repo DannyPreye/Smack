@@ -55,7 +55,8 @@ export default async function handler(
       const response = await addDoc(blogRef, {
         title,
         content,
-        slug: title.replace(/" "/g, "-"),
+        slug: title.split(" ").join("-"),
+        created_At: new Date().toDateString(),
       });
 
       res.status(200).json({

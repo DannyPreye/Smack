@@ -12,6 +12,7 @@ const BlogCard = ({ title, content, created_At, featuredImage }: BlogType) => {
         div.innerHTML = content
         setText(div.textContent!)
     }, [])
+    console.log(created_At)
     return (
         <div className="max-w-[380px] h-[500px] w-full flex-shrink-0 min-h-fit  rounded-[20px]  overflow-hidden   shadow-md">
             <div className="h-[250px] w-full relative bg-blue-400">

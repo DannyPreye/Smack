@@ -26,7 +26,7 @@ const generateBlogPost = async () => {
       title: title,
       content: response.data.choices[0].text,
       slug: title?.split(" ").join("-"),
-      created_At: new Date(),
+      created_At: new Date().toDateString(),
       published: false,
     });
   } catch (error) {
